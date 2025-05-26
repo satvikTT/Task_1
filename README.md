@@ -25,13 +25,38 @@ Understand how to discover open ports on devices within your local network. This
 - **Target Subnet:** `192.168.2.153/24`
 - **Interface Used:** `eth0`
   
+
+To find your IP and interface:
+```bash
+ip a / ifconfig
+```
 ---
 
-To find IP and interface:
-'''bash
-ip a / ifconfig
-'''
+To run diffeerent nmap commands:
+```bash
+nmap 192.168.2.153
+```
+```
+nmap -sS 192.168.2.153/24
+```
+```
+nmap -sT 192.168.2.153/24
+```
+```
+nmap -A 192.168.2.153/24
+```
+```
+nmap -sV 192.168.2.153/24
+```
 ---
+
+To start Wireshark capture:
+```
+wireshark &
+```
+---
+
+
 
 To save scan results as a Text file:
 ```bash
