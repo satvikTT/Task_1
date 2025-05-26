@@ -39,7 +39,7 @@ ifconfig
 ---
 
 
-To run diffeerent nmap commands:
+To run different nmap commands:
 ```bash
 nmap 192.168.2.123
 ```
