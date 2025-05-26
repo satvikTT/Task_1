@@ -1,52 +1,62 @@
-# NETWORK SCANNING & ANALYSIS PROJECT
+# NETWORK SCANNING & ANALYSIS PROJECT (TASK-1)
 
-Learn to discover open ports on devices in your local network using **Nmap** to understand network exposure. It also includes capturing network packets using **Wireshark** and improve network security awareness.
+Learn how to discover open ports on devices within your local network using **Nmap** to assess network exposure. This task also includes optional network packet capturing using **Wireshark** to deepen your understanding of network behavior and improve security awareness.
 
 ---
+
 ## Objective
 
-Understand how to discover open ports on devices within your local network. This helps assess network exposure, identify potential vulnerabilities, and improve overall network security posture.
+Discover and analyze open ports on devices in your local network. This process helps:
+- Assess network exposure
+- Identify running services
+- Pinpoint potential security risks
 
 ---
 
 ## Tools Used
 
-| Tool          | Purpose                                                  |
-|---------------|----------------------------------------------------------|
-| **Nmap**      | Scan local network for open TCP/UDP ports and services   |
-| **Wireshark** | (Optional) Analyze network traffic and packet details    |
-| **Kali Linux**| Penetration testing OS used as the scanning environment  |
+| Tool           | Purpose                                                  |
+|----------------|----------------------------------------------------------|
+| **Nmap**       | Scan the network for open TCP/UDP ports and services     |
+| **Wireshark**  | (Optional) Capture and inspect network traffic           |
+| **Kali Linux** | Penetration testing OS used for scanning and analysis    |
 
 ---
 
 ## IP Configuration
 
-- **Local IP Address:** `192.168.2.153`
-- **Target Subnet:** `192.168.2.153/24`
+- **Local IP Address:** `192.168.2.153`  
+- **Target Subnet:** `192.168.2.0/24`  
 - **Interface Used:** `eth0`
-  
 
-To find your IP and interface:
+### To find your IP and network interface:
 ```bash
-ip a / ifconfig
+ip a 
+```
+```
+ifconfig
 ```
 ---
 
+
 To run diffeerent nmap commands:
 ```bash
-nmap 192.168.2.153
+nmap 192.168.2.123
+```
+![output](C:\Users\SATVIK\Desktop\nmap\scan.png)
+```
+nmap -sS 192.168.2.123/24
+```
+![output](C:\Users\SATVIK\Desktop\nmap\subnet.png)
+```
+nmap -sT 192.168.2.123/24
 ```
 ```
-nmap -sS 192.168.2.153/24
+nmap -A 192.168.2.123/24
 ```
+![output]("C:\Users\SATVIK\Desktop\nmap\agg.png")
 ```
-nmap -sT 192.168.2.153/24
-```
-```
-nmap -A 192.168.2.153/24
-```
-```
-nmap -sV 192.168.2.153/24
+nmap -sV 192.168.2.123/24
 ```
 ---
 
@@ -57,9 +67,8 @@ wireshark &
 ---
 
 
-
 To save scan results as a Text file:
 ```bash
-sudo nmap -sS 10.0.2.0/24 -oN nmap.txt
+sudo nmap -sS 192.168.2.123 -oN nmap.txt
 ```
 ---
