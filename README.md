@@ -43,18 +43,15 @@ To run diffeerent nmap commands:
 ```bash
 nmap 192.168.2.123
 ```
-![output](C:\Users\SATVIK\Desktop\nmap\scan.png)
 ```
 nmap -sS 192.168.2.123/24
 ```
-![output](C:\Users\SATVIK\Desktop\nmap\subnet.png)
 ```
 nmap -sT 192.168.2.123/24
 ```
 ```
 nmap -A 192.168.2.123/24
 ```
-![output]("C:\Users\SATVIK\Desktop\nmap\agg.png")
 ```
 nmap -sV 192.168.2.123/24
 ```
