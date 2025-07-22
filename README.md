@@ -1,4 +1,4 @@
-# NETWORK SCANNING & ANALYSIS PROJECT (TASK-1)
+# NETWORK SCANNING & ANALYSIS
 
 Learn how to discover open ports on devices within your local network using **Nmap** to assess network exposure. This task also includes optional network packet capturing using **Wireshark** to deepen your understanding of network behavior and improve security awareness.
 
